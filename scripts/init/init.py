@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from package_installer import PackageInstaller
+from command_runner import CommandRunner
 from shell_setter import ShellSetter
 from ohmyzsh_installer import OhMyZshInstaller
 from zshrc_builder import ZshrcBuilder
@@ -19,19 +20,34 @@ def main():
         "noto-fonts-cjk",
     ]
 
+    custom_commands = [
+        {
+            "name": "wonkhester's custom rivercarro",
+            "commands": [
+                "mkdir -p ~/.local/bin",
+                'curl -L "$(curl -s https://api.github.com/repos/wonkhester/wonkhestersRivercarro/releases/latest | grep browser_download_url | grep rivercarro | cut -d \\" -f 4)" -o ~/.local/bin/rivercarro',
+                "chmod +x ~/.local/bin/rivercarro"
+            ]
+        }
+    ]
+
     print("\n🔹 Step 1: Installing packages...")
     installer = PackageInstaller(packages)
     installer.run()
 
-    print("\n🔹 Step 2: Setting default shell to Zsh...")
+    print("\n🔹 Step 2: Running custom commands...")
+    runner = CommandRunner(custom_commands)
+    runner.run()
+
+    print("\n🔹 Step 3: Setting default shell to Zsh...")
     shell_setter = ShellSetter("/bin/zsh")
     shell_setter.set_shell()
 
-    print("\n🔹 Step 3: Installing Oh My Zsh...")
+    print("\n🔹 Step 4: Installing Oh My Zsh...")
     ohmyzsh = OhMyZshInstaller()
     ohmyzsh.install()
 
-    print("\n🔹 Step 4: Building ~/.zshrc file...")
+    print("\n🔹 Step 5: Building ~/.zshrc file...")
     builder = ZshrcBuilder()
     builder.add_path("$HOME/.local/bin")
     builder.add_path("/opt/zig-0.14")
@@ -43,7 +59,7 @@ def main():
     builder.append_line("PROMPT='%F{blue}[%n@%m %~]%f${vcs_info_msg_0_} %F{green}$%f '")
     builder.write()
 
-    print("\n🔹 Step 4: Deploying .config files...")
+    print("\n🔹 Step 6: Deploying .config files...")
     deployer = ConfigDeployer()
     deployer.deploy()
 
