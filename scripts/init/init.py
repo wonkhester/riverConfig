@@ -30,12 +30,6 @@ def main():
                 "chmod +x ~/.local/bin/rivercarro"
             ]
         },
-        {
-            "name": "wonkhester's wezterm config",
-            "commands": [
-                'curl -L https://raw.githubusercontent.com/wonkhester/weztermConfig/master/wezterm.lua -o ~/.wezterm.lua'
-            ]
-        },
     ]
 
     print("\n🔹 Step 1: Installing packages...")
