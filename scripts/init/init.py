@@ -15,6 +15,8 @@ def main():
         "nvim",
         "swayidle",
         "waybar",
+        "ttf-nerd-fonts-symbols",
+        "noto-fonts-cjk",
     ]
 
     print("\n🔹 Step 1: Installing packages...")
