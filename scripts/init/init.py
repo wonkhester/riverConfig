@@ -33,7 +33,7 @@ def main():
         {
             "name": "wonkhester's wezterm config",
             "commands": [
-                'curl -L https://raw.githubusercontent.com/<user>/<repo>/main/wezterm.lua -o ~/.wezterm.lua'
+                'curl -L https://raw.githubusercontent.com/wonkhester/weztermConfig/master/wezterm.lua -o ~/.wezterm.lua'
             ]
         },
     ]
