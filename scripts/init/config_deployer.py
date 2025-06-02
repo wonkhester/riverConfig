@@ -2,8 +2,9 @@ import shutil
 from pathlib import Path
 
 class ConfigDeployer:
-    def __init__(self, source_dir="../../config", target_dir=None):
-        self.source_dir = Path(source_dir).expanduser().resolve()
+    def __init__(self, source_subdir="config", target_dir=None):
+        script_dir = Path(__file__).resolve().parent
+        self.source_dir = (script_dir / ".." / source_subdir).resolve()
         self.target_dir = Path(target_dir or "~/.config").expanduser()
 
     def deploy(self):
