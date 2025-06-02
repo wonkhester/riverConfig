@@ -4,7 +4,7 @@ from pathlib import Path
 class ConfigDeployer:
     def __init__(self, source_subdir="config", target_dir=None):
         script_dir = Path(__file__).resolve().parent
-        self.source_dir = (script_dir / ".." / source_subdir).resolve()
+        self.source_dir = (script_dir / ".." / ".." / source_subdir).resolve()
         self.target_dir = Path(target_dir or "~/.config").expanduser()
 
     def deploy(self):
