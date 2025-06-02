@@ -29,7 +29,13 @@ def main():
                 'curl -L "$(curl -s https://api.github.com/repos/wonkhester/wonkhestersRivercarro/releases/latest | grep browser_download_url | grep rivercarro | cut -d \\" -f 4)" -o ~/.local/bin/rivercarro',
                 "chmod +x ~/.local/bin/rivercarro"
             ]
-        }
+        },
+        {
+            "name": "wonkhester's wezterm config",
+            "commands": [
+                'curl -L https://raw.githubusercontent.com/<user>/<repo>/main/wezterm.lua -o ~/.wezterm.lua'
+            ]
+        },
     ]
 
     print("\n🔹 Step 1: Installing packages...")
