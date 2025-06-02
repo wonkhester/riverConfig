@@ -30,6 +30,12 @@ def main():
                 "chmod +x ~/.local/bin/rivercarro"
             ]
         },
+        {
+            "name": "Clone Neovim config",
+            "commands": [
+                "git clone https://github.com/wonkhester/nvimConfig ~/.config/nvim"
+            ]
+        },
     ]
 
     print("\n🔹 Step 1: Installing packages...")
