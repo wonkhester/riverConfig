@@ -15,6 +15,7 @@ def main():
         "zsh",
         "nvim",
         "swayidle",
+        "swaybg",
         "waybar",
         "ttf-nerd-fonts-symbols",
         "noto-fonts-cjk",
