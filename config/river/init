@@ -1,0 +1,18 @@
+#!/bin/sh
+
+~/.config/river/screen &
+
+~/.config/river/keybinds &
+
+~/.config/river/tags &
+
+~/.config/river/layouts &
+
+~/.config/river/taskbar &
+
+~/.config/river/style &
+
+~/.config/river/idle &
+
+~/.config/river/autoStart &
+

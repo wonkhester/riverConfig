@@ -1,0 +1,26 @@
+#!/bin/sh
+
+riverctl map normal Super Return spawn wezterm
+riverctl map normal Super Q close
+
+riverctl map normal Super+Shift H swap left
+riverctl map normal Super+Shift L swap right
+riverctl map normal Super+Shift J swap down
+riverctl map normal Super+Shift K swap up
+
+riverctl map normal Super J focus-view down
+riverctl map normal Super K focus-view up
+riverctl map normal Super H focus-view left
+riverctl map normal Super L focus-view right
+
+riverctl map normal Super+Ctrl H send-layout-cmd rivercarro "main-ratio -0.05"
+riverctl map normal Super+Ctrl L send-layout-cmd rivercarro "main-ratio +0.05"
+riverctl map normal Super+Ctrl J send-layout-cmd rivercarro "main-count -1"
+riverctl map normal Super+Ctrl K send-layout-cmd rivercarro "main-count +1"
+
+riverctl map normal Super+Shift F toggle-fullscreen
+riverctl map normal Super F send-layout-cmd rivercarro "main-location-cycle monocle"
+riverctl map normal Super Tab send-layout-cmd rivercarro "main-location-cycle top,left"
+
+riverctl map normal Super D spawn "wofi --style ~/.config/wofi/style.css"
+

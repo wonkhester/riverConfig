@@ -1,0 +1,61 @@
+@define-color t-background rgba(40, 40, 40, 0.8);
+@define-color background   #282828;
+@define-color foreground   #ddc7a1;
+
+@define-color black        #282828;
+@define-color red          #ea6962;
+@define-color green        #a9b665;
+@define-color orange       #e78a4e;
+@define-color yellow       #d8a657;
+@define-color blue         #7daea3;
+@define-color magenta      #d3869b;
+@define-color cyan         #89b482;
+@define-color white        #d4be98;
+
+@define-color bold-black   #665c54;
+@define-color bold-white   #fbf1c7;
+
+window {
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: 18px;
+}
+
+#input {
+    padding: 10px;
+    margin: 0px;
+    font-size: 24px;
+	color: @white;
+	background-color: @background-color;
+    border-radius: 0;
+}
+
+#inner-box {
+	margin: 0px;
+	color: @white;
+	background-color: @background;
+}
+
+#outer-box {
+	margin: 0px;
+	background-color: @background;
+}
+
+#selected {
+	background-color: @yellow;
+}
+
+#entry {
+	padding: 0px;
+    margin: 0px;
+	background-color: @background;
+}
+
+#scroll {
+	margin: 5px;
+	background-color: @background;
+}
+
+#text {
+	margin: 0px;
+	padding: 2px 2px 2px 10px;
+}

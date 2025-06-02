@@ -1,0 +1,196 @@
+/* Gruvbox Material Medium Palette */
+@define-color t-background rgba(40, 40, 40, 0.8);
+@define-color background   #282828;
+@define-color foreground   #ddc7a1;
+
+@define-color black        #282828;
+@define-color red          #ea6962;
+@define-color green        #a9b665;
+@define-color orange       #e78a4e;
+@define-color yellow       #d8a657;
+@define-color blue         #7daea3;
+@define-color magenta      #d3869b;
+@define-color cyan         #89b482;
+@define-color white        #d4be98;
+
+@define-color bold-black   #665c54;
+@define-color bold-white   #fbf1c7;
+
+
+@define-color calendar     @orange;
+@define-color clock        @yellow;
+@define-color network      @blue;
+@define-color tag          @cyan;
+@define-color tag-active   @yellow;
+@define-color weather      @blue;
+@define-color pulseaudio   @magenta;
+@define-color custom-ram   @red;
+
+
+/* General Waybar Styling */
+#waybar {
+    background: @t-background;
+    color: @foreground;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: 14px;
+}
+
+/* Module Styling */
+#custom-calendar.icon,
+#custom-calendar.info,
+#clock.icon,
+#clock.info,
+#network.icon, 
+#network.info, 
+#custom-tags.icon,
+#tags.info,
+#custom-weather.icon,
+#custom-weather.info,
+#pulseaudio.icon, 
+#pulseaudio.info, 
+#custom-ram.icon, 
+#custom-ram.info {
+    background: @background;
+    color: @foreground;
+    margin: 0.4em 0; 
+}
+
+/* Left Modules */
+/* Icon */
+#custom-calendar.icon,
+#clock.icon,
+#network.icon { 
+    color: @background;
+    border: 2px solid white;
+    padding: 0.2em 0.5em;
+    margin-left: 0.4em;
+}
+/* Info */
+#custom-calendar.info,
+#clock.info,
+#network.info { 
+    background-color: @background;
+    border: 2px solid white;
+    padding: 0.2em 0.8em;
+    margin-left: 0;
+}
+
+/* Center Modules */
+/* Icon */
+#custom-tags.icon {
+    color: @background;
+    border: 2px solid white;
+    padding: 0.2em 0.5em;
+    margin-left: 0.2em;
+}
+
+/* Info */
+#tags.info {
+    background-color: @background;
+    border: 2px solid white;
+    padding: 0.2em 0.8em;
+    margin-right: 0.2em;
+}
+
+/* Right Modules */
+/* Icon */
+#custom-weather.icon,
+#pulseaudio.icon, 
+#custom-ram.icon {
+    color: @background;
+    border: 2px solid white;
+    padding: 0.2em 0.5em;
+    margin-right: 0;
+} 
+
+/* Info */
+#custom-weather.info,
+#pulseaudio.info, 
+#custom-ram.info {
+    background-color: @background;
+    border: 2px solid white;
+    padding: 0.2em 0.8em;
+    margin-right: 0.4em;
+} 
+
+/* Specialiced */
+#custom-calendar.icon {
+    background-color: @calendar;
+    border-color: @calendar;
+}
+
+#custom-calendar.info {
+    color: @calendar;
+    border-color: @calendar;
+}
+
+#clock.icon {
+    background-color: @clock;
+    border-color: @clock;
+}
+
+#clock.info {
+    color: @clock;
+    border-color: @clock;
+}
+
+#network.icon {
+    background-color: @network;
+    border-color: @network;
+}
+
+#network.info {
+    color: @network;
+    border-color: @network;
+}
+
+#custom-tags.icon {
+    background-color: @tag;
+    border-color: @tag;
+}
+
+#tags.info {
+    color: @tag;
+    border-color: @tag;
+}
+
+#tags.info button {
+    color: @tag;
+    padding: 0;
+}
+
+#tags.info button.focused {
+    color: @tag-active;
+    font-weight: bold;
+}
+
+#custom-weather.icon {
+    background-color: @weather;
+    border-color: @weather;
+}
+
+#custom-weather.info {
+    color: @weather;
+    border-color: @weather;
+}
+
+#pulseaudio.icon {
+    background-color: @pulseaudio;
+    border-color: @pulseaudio;
+}
+
+#pulseaudio.info {
+    color: @pulseaudio;
+    border-color: @pulseaudio;
+}
+
+#custom-ram.icon {
+    background-color: @custom-ram;
+    border-color: @custom-ram;
+}
+
+#custom-ram.info {
+    color: @custom-ram;
+    border-color: @custom-ram;
+}
+

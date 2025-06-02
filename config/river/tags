@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for i in $(seq 1 9); do
+    riverctl map normal Super $i set-focused-tags $((1 << ($i - 1)))
+    riverctl map normal Super+Shift $i set-view-tags $((1 << ($i - 1)))
+done
+
+riverctl map normal Super 0 set-focused-tags $((1 << 9))
+riverctl map normal Super+Shift 0 set-view-tags $((1 << 9))

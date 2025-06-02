@@ -1,0 +1,5 @@
+#!/bin/sh
+
+riverctl spawn "waybar"
+riverctl padding top 30
+

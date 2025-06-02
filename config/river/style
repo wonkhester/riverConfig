@@ -1,0 +1,8 @@
+#!/bin/sh
+
+riverctl border-width 2
+riverctl border-color-focused 0xd8a657
+riverctl border-color-unfocused 0x7daea3
+swaybg -i ~/Downloads/wallpaper.jpg &
+# if andimated
+# mpvpaper '*' ~/Downloads/wallpaper.jpg &

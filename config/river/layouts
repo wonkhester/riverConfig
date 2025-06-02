@@ -1,0 +1,4 @@
+#!/bin/sh
+
+riverctl spawn "$HOME/.local/bin/rivercarro -inner-gaps 8 -outer-gaps 16 -per-tag"
+riverctl default-layout rivercarro
