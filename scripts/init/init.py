@@ -18,6 +18,7 @@ def main():
         "swaybg",
         "waybar",
         "wofi",
+        "btop",
         "ttf-nerd-fonts-symbols",
         "noto-fonts-cjk",
     ]
