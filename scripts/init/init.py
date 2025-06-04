@@ -22,6 +22,10 @@ def main():
         "pavucontrol",
         "ttf-nerd-fonts-symbols",
         "noto-fonts-cjk",
+
+
+        "python-requests",
+        "python-dotenv",
     ]
 
     custom_commands = [
