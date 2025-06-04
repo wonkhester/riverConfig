@@ -19,6 +19,7 @@ def main():
         "waybar",
         "wofi",
         "btop",
+        "pavucontrol",
         "ttf-nerd-fonts-symbols",
         "noto-fonts-cjk",
     ]
