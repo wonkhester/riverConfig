@@ -21,6 +21,10 @@
         "river/tags#info"
     ],
     "modules-right": [
+        "battery#icon",
+        "battery#info",
+        "backlight#icon",
+        "backlight#info",
         "custom/weather#icon",
         "custom/weather#info",
         "pulseaudio#icon",
@@ -29,7 +33,8 @@
         "custom/ram#info"
     ],
     "style": "gruvbox-material",
-    
+
+    // modules-left
     "custom/calendar#icon": {
         "format": "",
         "interval": 3600
@@ -46,7 +51,7 @@
         "format": "",
         "interval": 3600
     },
-    
+
     "clock#info": {
         "format": "{:%H:%M:%S}",
         "interval": 1
@@ -77,6 +82,7 @@
         "interval": 5
     },
 
+    // modules-center
     "custom/tags#icon": {
         "format": "",
         "interval": 3600
@@ -98,7 +104,42 @@
         ]
     },
 
-   "custom/weather#icon": {
+    // modules-right
+    "battery#icon": {
+        "bat": "BAT0",
+        "adapter": "AC",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "battery#info": {
+        "bat": "BAT0",
+        "adapter": "AC",
+        "interval": 60,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%",
+        "max-length": 25
+    },
+    
+    "backlight#icon": {
+        "device": "intel_backlight",
+        "format": ""
+    },
+    
+    "backlight#info": {
+        "device": "intel_backlight",
+        "format": "{percent}%"
+    },
+
+    "custom/weather#icon": {
         "exec": "~/.config/waybar/scripts/weather.py icon",
         "return-type": "json",
         "interval": 300
@@ -109,7 +150,7 @@
         "return-type": "json",
         "interval": 300
     },
- 
+
     "pulseaudio#icon": {
         "format": "{icon} ",
         "format-bluetooth": " {icon} ",
@@ -133,7 +174,7 @@
         "format-muted": "{volume}%",
         "scroll-step": 5
     },
-    
+
     "custom/ram#icon": {
         "format": " ",
         "interval": 3600
@@ -146,3 +187,4 @@
         "format": "{}"
     }
 }
+

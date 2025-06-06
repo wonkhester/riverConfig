@@ -22,6 +22,8 @@
 @define-color network      @blue;
 @define-color tag          @cyan;
 @define-color tag-active   @yellow;
+@define-color battery      @green;
+@define-color backlight    @yellow;
 @define-color weather      @blue;
 @define-color pulseaudio   @magenta;
 @define-color custom-ram   @red;
@@ -44,6 +46,10 @@
 #network.info, 
 #custom-tags.icon,
 #tags.info,
+#battery.icon,
+#battery.info,
+#backlight.icon,
+#backlight.info,
 #custom-weather.icon,
 #custom-weather.info,
 #pulseaudio.icon, 
@@ -94,6 +100,8 @@
 
 /* Right Modules */
 /* Icon */
+#battery.icon,
+#backlight.icon,
 #custom-weather.icon,
 #pulseaudio.icon, 
 #custom-ram.icon {
@@ -104,6 +112,8 @@
 } 
 
 /* Info */
+#battery.info,
+#backlight.info,
 #custom-weather.info,
 #pulseaudio.info, 
 #custom-ram.info {
@@ -164,6 +174,27 @@
     font-weight: bold;
 }
 
+#battery.icon {
+    background-color: @battery;
+    border-color: @battery;
+
+}
+
+#battery.info {
+    color: @battery;
+    border-color: @battery;
+}
+
+#backlight.icon {
+    background-color: @backlight;
+    border-color: @backlight;
+}
+
+#backlight.info {
+    color: @backlight;
+    border-color: @backlight;
+} 
+
 #custom-weather.icon {
     background-color: @weather;
     border-color: @weather;
@@ -193,4 +224,5 @@
     color: @custom-ram;
     border-color: @custom-ram;
 }
+
 
