@@ -24,3 +24,5 @@ riverctl map normal Super Tab send-layout-cmd rivercarro "main-location-cycle to
 
 riverctl map normal Super D spawn "wofi --style ~/.config/wofi/style.css"
 
+riverctl map normal None XF86MonBrightnessUp spawn "brightnessctl s +5%"
+riverctl map normal None XF86MonBrightnessDown spawn "brightnessctl s 5%-"
