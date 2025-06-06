@@ -22,6 +22,9 @@ def main():
         "pavucontrol",
         "ttf-nerd-fonts-symbols",
         "noto-fonts-cjk",
+        "npm",
+        "go",
+        "unzip",
 
 
         "python-requests",
