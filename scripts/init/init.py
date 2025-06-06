@@ -25,7 +25,7 @@ def main():
         "npm",
         "go",
         "unzip",
-
+        "ruby",
 
         "python-requests",
         "python-dotenv",
