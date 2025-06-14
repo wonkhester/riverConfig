@@ -29,3 +29,6 @@ riverctl map normal None XF86MonBrightnessDown spawn "brightnessctl s 5%-"
 
 riverctl map normal None XF86AudioRaiseVolume spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%"
 riverctl map normal None XF86AudioLowerVolume spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+
+riverctl map normal None XF86AudioMute spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+riverctl map normal None XF86AudioMicMute spawn "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
