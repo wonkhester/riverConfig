@@ -26,7 +26,7 @@ def main():
         "go",
         "unzip",
         "ruby",
-        "brightnessctl"
+        "brightnessctl",
 
         "python-requests",
         "python-dotenv",
